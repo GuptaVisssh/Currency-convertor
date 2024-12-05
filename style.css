@@ -1,0 +1,232 @@
+/* Base rule */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/* Theme */
+:root{
+    --body-bg-color: #bfaa0b;
+    --nav-bar-color: #f5de33;
+    --footer--color: #070707;
+    --text-color: #d22323;
+    --main-color: #dd6306;
+
+}
+
+
+
+/* states */
+body{
+    background-color: var(--body-bg-color);
+}
+
+
+
+/* Re-useable */
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+/* Start Navbar */
+
+.navbar{
+    padding: 2rem 20rem;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-bar-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+
+img{
+    width: 7rem;
+    height: auto;
+}
+
+
+.navbar ul{
+    display: flex;
+
+    & li{
+        padding: 0rem 1rem;
+        list-style: none;
+    }
+
+    & li a{
+        color: var(--text-color);
+        position: relative;
+        display: inline-block;
+        font-size: 1.8rem;
+
+        &::after{
+            content: "";
+            position: absolute;
+            /* color: var(--main-color); */
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            border-bottom: .2rem solid var(--text-color);
+            transition: all 0.3s linear;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -ms-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+        }
+    }
+    
+    & li a:hover:after{
+        width: 100%;
+        /* color: var(--main-color); */
+    }
+}
+
+/* End Navbar */
+
+
+
+
+
+/* Start heros */
+.converter-container{
+    max-width: 100rem;
+    background-color: aquamarine;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    padding: 0 3rem;
+    border-radius: 1.6rem;
+    -webkit-border-radius: 1.6rem;
+    -moz-border-radius: 1.6rem;
+    -ms-border-radius: 1.6rem;
+    -o-border-radius: 1.6rem;
+}
+
+.converter-container h1{
+    font-size: 4rem;   
+    margin-bottom: 1.3rem ;
+    font-weight: 500;
+    position: relative;
+}
+
+.converter-container h1::after {
+    position: absolute;
+    content: "";
+    width: 8rem;
+    top: 0;
+    left: 0.2rem;
+    bottom: 0.6rem;
+    border-bottom: 0.3rem solid var(--body-bg-color);
+}
+
+
+.converter-container .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.converter-container input, .converter-container select{
+    padding: 0.9rem 0.8rem;
+    border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -ms-border-radius: 10px ;
+    -o-border-radius: 10px ;
+}
+
+.converter-container input{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+.converter-container .select-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.converter-container .select-container select{
+    display: flex;
+    width: 97%;
+    margin-block: 0.4rem;
+}
+
+
+
+
+
+
+.converter-container .swap-btn{
+    width: 5.7rem;
+    border: 0.4rem solid var(--body-bg-color);
+    /* padding: 0.1rem 0rem; */
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.fa-solid{
+    rotate: 90deg;
+}
+
+
+.result{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    background-color: var(--body-bg-color);
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+}
+/* End heros */
+
+
+
+.result-currency{
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 8vh;
+    font-size: 2.1rem;
+    font-weight: 600;
+    text-align: center;
+    background: #0f1212;
+    color: var(--text-color);
+    padding: 1.3rem 0;
+}
